@@ -11,6 +11,10 @@ import { Prueba2Component } from './prueba2/prueba2.component';
 import { BodyComponent } from './body/body.component';
 import { LoggingComponent } from './logging/logging.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { EmpleadosComponent } from './empleados/empleados.component';
+import { RegistroComponent } from './registro/registro.component';
+import { ConsultaComponent } from './consulta/consulta.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { HttpClientModule } from '@angular/common/http';
     Prueba1Component,
     Prueba2Component,
     BodyComponent,
-    LoggingComponent
+    LoggingComponent,
+    HomeComponent,
+    EmpleadosComponent,
+    RegistroComponent,
+    ConsultaComponent
   ],
   imports: [
     BrowserModule,

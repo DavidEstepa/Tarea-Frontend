@@ -1,19 +1,22 @@
 <header>
     <main>
-        <div class="d-flex flex-row bd-highlight mb-3">
-            <div class="p-2 bd-highlight">
-                <a [routerLink]="['/principal']">
+        <div class="d-flex flex-row bd-highlight ">
+            <div class="p-2 flex-grow-1 bd-highlight">
+                <a [routerLink]="['/', 'principal', { outlets: { sidebar: ['home'] } }]">
                     <img src="https://img.icons8.com/ios/26/000000/g.png"/>
                 </a>
             </div>
             <div class="p-2 bd-highlight">
-                <a class="nav-link active" [routerLink]="['/ingreso']">Conéctese</a>
+                <a class="nav-link active" [routerLink]="['/ingreso']">{{name}}</a>
             </div>
             <div class="p-2 bd-highlight">
-                <a class="nav-link">Actores</a>
-            </div>
-            <div class="p-2 bd-highlight">
-                <a class="nav-link disabled">Series</a>
+                <div class="d-flex flex-row-reverse bd-highlight">
+                    <div class="p-2 bd-highlight">
+                        <a href="http://www.udea.edu.co/wps/portal/udea/web/inicio/investigacion/grupos-investigacion/ingenieria-tecnologia/gibic">
+                            <img src="https://img.icons8.com/metro/26/000000/university.png"/>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
