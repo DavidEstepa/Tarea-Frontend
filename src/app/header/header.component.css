@@ -1,3 +1,4 @@
+
 a {
     text-decoration: none;
     background-color: transparent;
@@ -12,4 +13,12 @@ header {
 }
 main a{
     color: white;
+}
+
+.boton{
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 10px;
 }

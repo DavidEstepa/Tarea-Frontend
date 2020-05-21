@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggingService } from '../services/logging.service';
+import { Ilogging } from '../model/Ilogging';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  name = 'Conéctese';
-  constructor() { }
-
+  logging: Ilogging;
+  constructor(
+    private commentsLogging: LoggingService
+  ) {
+    this.logging = {name: 'Conéctese', isActive: false};
+    this.commentsLogging.currentState.subscribe(newState => {
+      this.logging = newState;
+    });
+  }
   ngOnInit(): void {
   }
 

@@ -1,1 +1,19 @@
-<p>logging works!</p>
+<div class="inicio"> 
+    <img src="http://localhost:4200/assets/images/udea.png" width="300" height="300" class="img-fluid" alt="Responsive image">
+    <h1 class="h3 mb-3 font-size: 2.5rem;">Ingrese su usuario</h1>
+    <div class="col-12 col-sm-6 offset-sm-3 justify-content-center">
+        <form [formGroup]="loggingForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="inputEmail" style="vertical-align: inherit;"> </label>
+                <input type="email" id="inputEmail" class="form-control justify-content-center tamanio" placeholder="Usuario" formControlName="name" required autofocus >
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="sr-only" style="vertical-align: inherit;"></label>
+                <input type="password" id="inputPassword" class="form-control justify-content-center" placeholder="Contraseña" formControlName="password" required>
+            </div>
+            <button class="Btn btn-outline-succes" type="submit" v-on:click="comparacion()">
+                Ingresar
+            </button>
+        </form>
+    </div>
+</div>

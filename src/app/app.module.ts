@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
-import { Prueba1Component } from './prueba1/prueba1.component';
-import { Prueba2Component } from './prueba2/prueba2.component';
 import { BodyComponent } from './body/body.component';
 import { LoggingComponent } from './logging/logging.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,8 +18,6 @@ import { ConsultaComponent } from './consulta/consulta.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    Prueba1Component,
-    Prueba2Component,
     BodyComponent,
     LoggingComponent,
     HomeComponent,
