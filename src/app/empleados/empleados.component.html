@@ -1,1 +1,67 @@
-<p>empleados works!</p>
+<div class="empleados">
+    <div style="text-align: center;">
+        <img  src="http://localhost:4200/assets/images/udea.png" width="200" height="200" class="img-fluid" alt="Responsive image">
+    </div>
+    <h1 style="vertical-align: inherit;">
+            Formulario ingreso empleados
+    </h1>
+    
+    <div class="col-12 justify-content-center">
+        <form [formGroup]="EmpleadosForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="lastName" style="vertical-align: inherit;">
+                    Nombres
+                </label>
+                <input type="text" class="form-control" id="firsname" formControlName="nombres" placeholder vaule required>
+            </div>
+            <div class="form-group">
+                <label for="lastName" style="vertical-align: inherit;">
+                    Apellidos
+                </label>
+                <input type="text" class="form-control" id="firsname"  formControlName="apellidos" placeholder vaule required>
+            </div>
+            <div class="form-group">
+                <label form="document" style="vertical-align: inherit;">
+                    Documento
+                </label>
+                <input type="document" class="form-control" id="document" formControlName="documento" placeholder vaule required>
+            </div>
+            <div class="form-group">
+                <label for="age"style="vertical-aling: inherit;">
+                    Edad
+                </label>
+                <input type="age" class="form-control" id="age" formControlName="edad" placeholder vaule required>
+            </div>
+            <div class="form-group">
+                <label for="emai" style="vertical-align: inherit;">
+                    Correo
+                </label>
+                <input type="email" class="form-control" id="email" formControlName="correo" placeholder vaule required>
+            </div>
+            <div class="form-group">
+                <label for="address" style="vertical-align: inherit;">
+                    Direccion
+                </label>
+                <input type="address" class="form-control" id="address" formControlName="direccion" placeholder vaule required>
+            </div>
+            <div class="form-group">
+                <label for="phone" style="vertical-align: inherit;">
+                    Telefono
+                </label>
+                <input type="Phone" class="form-control" id="Phone" formControlName="telefono" placeholder vaule required>
+            </div>
+            <div class="form-group">
+                <label for="text"style="vertical-aling: inherit;">
+                    EPS
+                </label>
+                <input type="text" class="form-control" id="EPS" formControlName="eps"  placeholder vaule required>
+            </div>
+
+            <div class="col text-center">
+                <button class="Btn btn-outline-succes" type="submit" [disabled]="!EmpleadosForm.valid">
+                    Guardar
+                </button>
+            </div>
+        </form>
+    </div>
+  </div>
