@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Ilogging } from '../model/Ilogging';
 import { LoggingService } from '../services/logging.service';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-logging',
   templateUrl: './logging.component.html',
@@ -11,7 +12,8 @@ export class LoggingComponent implements OnInit {
   public loggingForm: FormGroup;
   constructor(
     private formBulder: FormBuilder,
-    private loggingService: LoggingService)
+    private loggingService: LoggingService,
+    private router: Router)
     {
     this.loggingForm = this.formBulder.group({
       name: ['', Validators.required],
@@ -19,10 +21,13 @@ export class LoggingComponent implements OnInit {
     });
     this.loggingService.confirm('', '');
   }
-
   ngOnInit(): void {
   }
   onSubmit(){
-    this.loggingService.confirm(this.loggingForm.value.name, this.loggingForm.value.password);
+    let state: boolean;
+    state = this.loggingService.confirm(this.loggingForm.value.name, this.loggingForm.value.password);
+    if (state){
+      this.router.navigateByUrl('principal/(sidebar:home)');
+    }
   }
 }

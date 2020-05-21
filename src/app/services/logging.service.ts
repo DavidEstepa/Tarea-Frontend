@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { Ilogging } from '../model/Ilogging';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -22,5 +23,11 @@ export class LoggingService {
       this.State = {name: 'Conéctese', isActive: false};
     }
     this.currentStateSubject.next(this.State);
+    if (this.State.isActive === true){
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 }
