@@ -36,7 +36,8 @@ li {
     display: list-item;
     text-align: -webkit-match-parent;
 }
-a[disabled] {
-    pointer-events: none;
-    color: gray;
+
+a:hover{
+    cursor:pointer;
+    color: rgb(51, 41, 41);
 }

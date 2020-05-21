@@ -16,7 +16,7 @@
                         <a id="consulta" class="toc-link" [routerLink]="['/', 'principal', { outlets: { sidebar: ['consulta'] } }]">Consulta</a>
                     </li>
                     <li>
-                        <a id="salir" class="toc-link">Salir</a>
+                        <a id="salir" class="toc-link move" (click)="salida()">Salir</a>
                     </li>
                 </ul>
             </nav>
