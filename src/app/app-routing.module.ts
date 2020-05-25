@@ -4,8 +4,9 @@ import { BodyComponent } from './body/body.component';
 import { LoggingComponent } from './logging/logging.component';
 import { HomeComponent } from './home/home.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
-import { RegistroComponent } from './registro/registro.component';
-import { ConsultaComponent } from './consulta/consulta.component';
+import { InsumosComponent } from './insumos/insumos.component';
+import { ProcesoComponent } from './proceso/proceso.component';
+import { ProveedorComponent } from './proveedor/proveedor.component';
 
 
 const routes: Routes = [
@@ -17,8 +18,8 @@ const routes: Routes = [
       outlet: 'sidebar'
     },
     {
-      path: 'registro',
-      component: RegistroComponent,
+      path: 'insumos',
+      component: InsumosComponent,
       outlet: 'sidebar'
     },
     {
@@ -27,8 +28,13 @@ const routes: Routes = [
       outlet: 'sidebar'
     },
     {
-      path: 'consulta',
-      component: ConsultaComponent,
+      path: 'proceso',
+      component: ProcesoComponent,
+      outlet: 'sidebar'
+    },
+    {
+      path: 'proveedor',
+      component: ProveedorComponent,
       outlet: 'sidebar'
     }
   ]},

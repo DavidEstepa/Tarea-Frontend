@@ -25,6 +25,8 @@ export class EmpleadosComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(){
-    console.log('Holi');
+    console.log(this.EmpleadosForm.getRawValue());
+    this.EmpleadosForm.reset();
+    window.alert('Datos Registrados¡¡');
   }
 }

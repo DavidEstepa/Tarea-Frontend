@@ -12,7 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
 import { RegistroComponent } from './registro/registro.component';
-import { ConsultaComponent } from './consulta/consulta.component';
+import { InsumosComponent } from './insumos/insumos.component';
+import { ProveedorComponent } from './proveedor/proveedor.component';
+import { ProcesoComponent } from './proceso/proceso.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ConsultaComponent } from './consulta/consulta.component';
     HomeComponent,
     EmpleadosComponent,
     RegistroComponent,
-    ConsultaComponent
+    InsumosComponent,
+    ProveedorComponent,
+    ProcesoComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,9 @@
     <main>
         <div class="d-flex flex-row-reverse">
             <div class="p-2">
+                <button type="button" class="boton" id='boton_nav' (click)="mostrar()">Menú</button>
+            </div>
+            <div class="p-2">
                 <button type="button" class="boton" [disabled]="logging.isActive" [routerLink]="['/ingreso']">{{logging.name}}</button>
             </div>
             <div class="p-2">

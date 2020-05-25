@@ -1,0 +1,58 @@
+<div class="insumos">
+    <h2 style="vertical-align: inherit;">
+            Formulario ingreso de insumos 
+    </h2>
+    <form [formGroup]="insumosForm" (ngSubmit)="onSubmit()"> 
+
+        <div class="form-group">
+            <label for="insumo" style="vertical-align: inherit;">
+                Insumo
+            </label>
+            <select class="form-control" id="insumos" formControlName="nombre" placeholder vaule required
+            style="
+       box-shadow: 0px 6px 20px -12px rgba(25, 90, 36,0.75);
+       border-radius: 1rem;">
+                <option>Tela Conductora</option>
+                <option>Tela piezoresistiva</option>
+                <option>Tela soporte</option>
+                <option>Velcro</option>
+                <option>Tarjetas electronicas</option>
+                <option>Caja de control</option>
+                <option>Correas de sujecion</option>
+                <option>Forro</option>
+           </select>
+        </div>
+
+        <div class="form-group">
+            <label for="Descripcion" style="vertical-align: inherit;">
+                Descripcion
+            </label>
+            <textarea class="form-control" id="descripcion" rows="3" formControlName="descripcion" placeholder vaule required
+            style="
+       box-shadow: 0px 6px 20px -12px rgba(25, 90, 36,0.75);
+       border-radius: 1rem;"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label form="fecha" style="vertical-align: inherit;">
+                Fecha Ingreso
+            </label>
+            <input type="date" class="form-control" id="fecha" formControlName="fecha" placeholder vaule required>
+        </div>
+
+        <div class="form-group">
+            <label for="text"style="vertical-aling: inherit;">
+                Provedor
+            </label>
+            <input type="text" class="form-control" id="provedor" formControlName="proveedor" placeholder vaule required>
+        </div>
+
+        <div class="col text-center">
+            <button class="Btn btn-outline-succes" type="submit" [disabled]="!insumosForm.valid">
+                Guardar
+            </button>
+        </div>
+
+    </form>
+  </div>
+

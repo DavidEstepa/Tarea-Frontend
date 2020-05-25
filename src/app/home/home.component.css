@@ -1,0 +1,22 @@
+li{
+    background-color:rgba(0, 0, 0, 0.61);
+}
+li.active{
+    background-color:rgb(0, 0, 0);
+}
+span.carousel-control-next-icon{
+    background-color: rgba(0, 0, 0);
+}
+span.carousel-control-prev-icon{
+    background-color: rgba(0, 0, 0);
+}
+div.Acerca{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    font-size: 150%;
+}
+h2{
+    color: rgb(20, 63, 3);
+}

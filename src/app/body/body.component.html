@@ -1,6 +1,7 @@
 <body>
     <div class="row flex-xl-nowrap">
-        <div class="col-12 col-sm-4 col-lg-2" style="border-right: 1px solid rgba(0, 0, 0, 0.1);">
+        <div class="col-12 col-sm-4 col-lg-2 bot_nav" style="border-right: 1px solid rgba(0, 0, 0, 0.1);" 
+        [class.sidebarOpen]="sidebarOpen">
             <nav class="sidebar">
                 <ul class="nav flex-column">
                     <li>
@@ -9,15 +10,20 @@
                     <li>
                         <a id="empleados" class="toc-link" [routerLink]="['/', 'principal', { outlets: { sidebar: ['empleados'] } }]">Empleados</a>
                     </li>
-                    <li>
-                        <a id="registro" class="toc-link" [routerLink]="['/', 'principal', { outlets: { sidebar: ['registro'] } }]">Registro</a>
-                    </li>
-                    <li>
-                        <a id="consulta" class="toc-link" [routerLink]="['/', 'principal', { outlets: { sidebar: ['consulta'] } }]">Consulta</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle forma" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Registro
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" [routerLink]="['/', 'principal', { outlets: { sidebar: ['insumos'] } }]">Insumos</a>
+                            <a class="dropdown-item" [routerLink]="['/', 'principal', { outlets: { sidebar: ['proveedor'] } }]">Proveedor</a>
+                            <a class="dropdown-item" [routerLink]="['/', 'principal', { outlets: { sidebar: ['proceso'] } }]">Proceso</a>
+                        </div>
                     </li>
                     <li>
                         <a id="salir" class="toc-link move" (click)="salida()">Salir</a>
                     </li>
+
                 </ul>
             </nav>
         </div>

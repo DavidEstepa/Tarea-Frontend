@@ -1,0 +1,110 @@
+<div class="Proceso">
+    <h2 style="vertical-align: inherit;">
+            Formulario ingreso proceso manta
+    </h2>
+    <form [formGroup]="procesoForm" (ngSubmit)="onSubmit()"> 
+        <label for="insumo" style="vertical-align: inherit;">
+            Proceso
+        </label>
+       <select class="form-control " id="insumos" formControlName="Proceso" style="
+       box-shadow: 0px 6px 20px -12px rgba(25, 90, 36,0.75);
+       border-radius: 1rem;">
+            <option selected>...</option>
+            <option>Seccionado</option>
+            <option>Planchado</option>
+            <option>Costura</option>
+            <option>Cableado electrico</option>
+            <option>Ensamblaje caja de control</option>
+            <option>validacion</option>
+            <option>Etiquetado</option>
+       </select>
+
+
+        <label for="name"style="vertical-aling: inherit;">
+            Nombre Empleado
+        </label>
+        <input type="text" class="form-control" id="name" formControlName="NombreEmpleado">
+
+
+        <label for="manta"style="vertical-aling: inherit;">
+            Numero de serie manta
+        </label>
+        <input type="text" class="form-control" id="manta" formControlName="Numerodeseriemanta">
+
+
+        <label for="insumo" style="vertical-align: inherit;">
+            Insumo
+        </label>
+        <div class="insumo">
+            <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Tela Conductora</label>
+                </div>
+                <input type="text" class="form-control" placeholder="id tela conductora" aria-label="id tela conductora" aria-describedby="basic-addon1" formControlName="TelaConductora">
+            </div>
+            
+            <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                    <label class="custom-control-label" for="customCheck2">Tela piezoresistiva</label>
+                </div>
+                <input type="text" class="form-control" formControlName="Telapiezoresistiva" placeholder="id tela piezoresistiva"  aria-label="id tela piezoresistiva" aria-describedby="basic-addon1">
+            </div>
+            
+            <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck3" >
+                    <label class="custom-control-label" for="customCheck3">Tela soporte</label>
+                </div>
+                <input type="text" class="form-control" formControlName="Telasoporte" placeholder="id tela soporte" aria-label="id tela soporte" aria-describedby="basic-addon1">
+            </div>
+            
+            <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck4" >
+                    <label class="custom-control-label" for="customCheck4">Velcro</label>
+                </div>
+                <input type="text" class="form-control" formControlName="Velcro" placeholder="id tela Velcro"  aria-label="id Velcro" aria-describedby="basic-addon1">
+            </div>
+            
+            <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck5" >
+                    <label class="custom-control-label" for="customCheck5">Tarjeta electronica</label>
+                </div>
+                <input type="text" class="form-control" formControlName="Tarjetaelectronica" placeholder="id Tarjeta electronica" aria-label="id Tarjeta electronica" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck6" >
+                    <label class="custom-control-label" for="customCheck6">Caja de control</label>
+                </div>
+                <input type="text" class="form-control" formControlName="Cajadecontrol" placeholder="id caja de control" aria-label="id caja de control" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck7" >
+                    <label class="custom-control-label" for="customCheck7">Correas de sujecion</label>
+                </div>
+                <input type="text" class="form-control" formControlName="Correasdesujecion" placeholder="id Correas"  aria-label="id tela Correas" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck8" >
+                    <label class="custom-control-label" for="customCheck8">Forro</label>
+                </div>
+                <input type="text" class="form-control" formControlName="Forro" placeholder="id forro"  aria-label="id forro" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="col text-center">
+                <button class="Btn btn-outline-succes" type="submit" [disabled]="!procesoForm.valid">
+                    Guardar
+                </button>
+            </div>
+        </div>
+    </form>
+  </div>
